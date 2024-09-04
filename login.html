@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<main>
+    <div id="menu_drawn">
+        <div id="image_cooker">
+            <img id="chefe" src="Imagens-food/chefe.png" alt="">
+            <img id="rosquinha" src="Imagens-food/rosquinha.png" alt="">
+            <img id="pizza" src="Imagens-food/pizza.png" alt="">
+            <p>Welcome</p>
+        </div>
+    </div>
+
+    <div id="menu_form">
+        <p id="top_p_sign">SIGN IN TO FOOD WEB</p>
+
+        <form action="POST" id="form_signIn">
+            <img id="estrela" src="Imagens-food/estrelas.png" alt="">
+
+            <input type="text" class="input" placeholder="Name" required id="userName">
+            <input type="tel"  oninput="validateNumber(this)" name="phone" id="userPhone" class="input registerForm" placeholder="(21) 99999-9999" maxlength="15" required>
+            <input type="email" name="email" class="input registerForm" id="userEmail" placeholder="E-mail" required>
+            <input type="password" name="password" class="input" id="userPassword" placeholder="Password" required>
+
+            <button id="sing_in"> SIGN IN</button>
+            <div id="register_and_singIn">
+                <p id="p_register">Don't have an account?</p>
+                <a href="#" id="register_link"> Register now!</a> 
+                <a href="#" id="sign_in_link"> Sign In</a>
+            </div>
+            
+            
+        </form>
+    </div>
+</main>
+    <script src="script.js"></script>
+</body>
+</html>
