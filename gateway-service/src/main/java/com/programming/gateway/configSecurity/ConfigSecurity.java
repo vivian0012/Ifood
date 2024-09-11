@@ -28,11 +28,8 @@ public class ConfigSecurity implements WebFluxConfigurer {
                                 .permitAll()
                                 .pathMatchers("/api/user/**")
                                 .permitAll()
-<<<<<<< HEAD
-=======
                                 .pathMatchers("api/pizza/**")
                                 .permitAll()
->>>>>>> 75304ba (backEnd)
                                 .anyExchange()
                                 .authenticated()
                 )

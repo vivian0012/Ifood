@@ -9,12 +9,20 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/user/")
 public class userController {
 
     @Autowired
     private ServiceUser serviceUser;
+
+    @GetMapping("readAll")
+    public ResponseEntity<List<User>> readAll () {
+        List<User> teste = serviceUser.readAll();
+        return ResponseEntity.ok().body(teste);
+    }
 
     @PostMapping("creat")
     public ResponseEntity<User> creatO(@RequestBody User user) {

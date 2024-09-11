@@ -15,23 +15,21 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idUser;
 
-    private String userName;  // Certifique-se de que o nome da propriedade está correto
-    private String userPassword;
-
+    private String userName;
     @Column(unique = true)
     private Long userPhone;
     @Column(unique = true)
     private String userEmail;
-    // Telefone
+    private String userPassword;
 
     public User(){}
 
-    public User(Long idUser, String userName, String userPassword, Long userPhone, String userEmail){
+    public User(Long idUser, String userName, Long userPhone, String userEmail, String userPassword) {
         this.idUser = idUser;
         this.userName = userName;
-        this.userPassword = userPassword;
         this.userPhone = userPhone;
         this.userEmail = userEmail;
+        this.userPassword = userPassword;
     }
 
     public Long getIdUser() {
@@ -50,12 +48,12 @@ public class User implements Serializable {
         this.userName = userName;
     }
 
-    public String getUserPassword() {
-        return userPassword;
+    public Long getUserPhone() {
+        return userPhone;
     }
 
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
+    public void setUserPhone(Long userPhone) {
+        this.userPhone = userPhone;
     }
 
     public String getUserEmail() {
@@ -66,11 +64,11 @@ public class User implements Serializable {
         this.userEmail = userEmail;
     }
 
-    public Long getUserPhone() {
-        return userPhone;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setUserPhone(Long userPhone) {
-        this.userPhone = userPhone;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 }

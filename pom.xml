@@ -12,10 +12,7 @@
         <module>user-service</module>
         <module>discovery-service</module>
         <module>gateway-service</module>
-<<<<<<< HEAD
-=======
         <module>pizza-service</module>
->>>>>>> 75304ba (backEnd)
     </modules>
 
     <parent>

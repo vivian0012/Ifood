@@ -24,8 +24,7 @@ public class ServiceUser {
     public boolean creatUser(User obj){
             List<User> usuarios = repositoryUser.findAll();
             for (User userExist : usuarios) {
-                if ( userExist.getUserEmail().equals(obj.getUserEmail())
-                        && userExist.getUserPhone().equals(obj.getUserPhone())) {
+                if ( userExist.getUserEmail().equals(obj.getUserEmail())){
                     return false;
                 }
             }
@@ -46,5 +45,9 @@ public class ServiceUser {
     public void deleteById(Long idUser){
         User deleteId = repositoryUser.findById(idUser).get();
         repositoryUser.deleteById(deleteId.getIdUser());
+    }
+
+    public List<User> readAll() {
+        return repositoryUser.findAll();
     }
 }
