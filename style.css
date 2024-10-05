@@ -107,7 +107,8 @@ main{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
-#sing_in{
+
+.StyleButton{
     cursor: pointer;
     margin-top: 10px;
     height: 50px;
@@ -118,6 +119,9 @@ main{
     color: rgb(181, 34, 34);
     font-size: 25px;
     font-family:"Nerko One", cursive;
+}
+#btn_register{
+    display: none;
 }
 
 .registerForm {
@@ -134,6 +138,13 @@ main{
     width: 100%;
     justify-content: center;
     align-items: center;
+}
+#btn_welcome{
+    display: none;
+}
+#bntLinkWelcome{
+    color: #993737;
+    text-decoration: none;
 }
 #register_link {
     margin-left: 5px;
@@ -160,4 +171,16 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none; /* Chrome, Safari, and Opera */
     margin: 0;
+}
+
+#user_created{
+    background-color: white;
+    font-size: 20px;
+    padding: 25px;
+    border-radius: 30px 30px 30px 30px;
+    color: rgb(154, 36, 36);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: none;
 }
