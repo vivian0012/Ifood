@@ -39,7 +39,7 @@ public class PizzaService {
     }
     private void DataUpdate(Pizza objNew, Pizza objOld) {
         objNew.setNamePizza(objOld.getNamePizza());
-        objNew.setUrlPhotoPizza(objOld.getUrlPhotoPizza());
+        objNew.setPathPizza(objOld.getPathPizza());
         objNew.setDescriptionPizza(objOld.getDescriptionPizza());
         objNew.setPricePizza(objOld.getPricePizza());
     }

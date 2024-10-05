@@ -3,6 +3,7 @@ package com.programming.pizza.entities;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 @Table(name = "tb_pizza")
@@ -13,16 +14,16 @@ public class Pizza implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPizza;
-    private String urlPhotoPizza;
+    private String pathPizza;
     private String namePizza;
     private String descriptionPizza;
-    private Long pricePizza;
+    private Double pricePizza;
 
     public Pizza(){}
 
-    public Pizza(Long idPizza, String urlPhotoPizza, String namePizza, String descriptionPizza, Long pricePizza) {
+    public Pizza(Long idPizza, String pathPizza, String namePizza, String descriptionPizza, Double pricePizza) {
         this.idPizza = idPizza;
-        this.urlPhotoPizza = urlPhotoPizza;
+        this.pathPizza = pathPizza;
         this.namePizza = namePizza;
         this.descriptionPizza = descriptionPizza;
         this.pricePizza = pricePizza;
@@ -36,12 +37,12 @@ public class Pizza implements Serializable {
         this.idPizza = idPizza;
     }
 
-    public String getUrlPhotoPizza() {
-        return urlPhotoPizza;
+    public String getPathPizza() {
+        return pathPizza;
     }
 
-    public void setUrlPhotoPizza(String urlPhotoPizza) {
-        this.urlPhotoPizza = urlPhotoPizza;
+    public void setPathPizza(String pathPizza) {
+        this.pathPizza = pathPizza;
     }
 
     public String getNamePizza() {
@@ -60,12 +61,25 @@ public class Pizza implements Serializable {
         this.descriptionPizza = descriptionPizza;
     }
 
-    public Long getPricePizza() {
+    public Double getPricePizza() {
         return pricePizza;
     }
 
-    public void setPricePizza(Long pricePizza) {
+    public void setPricePizza(Double pricePizza) {
         this.pricePizza = pricePizza;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pizza pizza = (Pizza) o;
+        return Objects.equals(idPizza, pizza.idPizza) && Objects.equals(pathPizza, pizza.pathPizza) && Objects.equals(namePizza, pizza.namePizza) && Objects.equals(descriptionPizza, pizza.descriptionPizza) && Objects.equals(pricePizza, pizza.pricePizza);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idPizza, pathPizza, namePizza, descriptionPizza, pricePizza);
     }
 }
 
